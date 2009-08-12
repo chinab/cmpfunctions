@@ -1,12 +1,12 @@
 #summary One-sentence summary of this page.
 #labels Featured,Phase-Requirements,Phase-Support,Phase-Implementation
 
-= Introduction =
+= Introducción =
 
 Este proyecto fue desarrollado por el equipo de desarrolladores Business One de SofOS, C.A. en Valencia, Venezuela.
 
 
-= Details =
+= Contenido =
 
 Algunas funciones contenidas:
   * Creación de campos, tablas, udos, claves...
@@ -15,7 +15,8 @@ Algunas funciones contenidas:
   * Manejo de cuentas segmentadas.
   * Utilidades como getComboSelected, setComboSelected, getCorrelativo, etc.
 
-Cómo usar:
+= Cómo usar =
+
 Registrar el dll como referencia en el addon e instanciar la librería de la siguiente forma:
 
 ...
@@ -46,5 +47,6 @@ Public Sub New()
     End Sub
 
 
-Disclaimer:
-Esta librería se provee tal cual está bajo licencia GNU. No se estipula ningún tipo de soporte.
+= Disclaimer =
+
+Esta librería se provee "AS IS" (tal cual está) bajo licencia GNU. No se estipula ningún tipo de soporte.
