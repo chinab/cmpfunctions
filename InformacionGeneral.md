@@ -1,0 +1,50 @@
+# Introducción #
+
+Este proyecto fue desarrollado por el equipo de desarrolladores Business One de SofOS, C.A. en Valencia, Venezuela.
+
+
+# Contenido #
+
+Algunas funciones contenidas:
+  * Creación de campos, tablas, udos, claves...
+  * Manejo de elementos XML, como formularios, layouts...
+  * Conversiones de fecha, texto, etc.
+  * Manejo de cuentas segmentadas.
+  * Utilidades como getComboSelected, setComboSelected, getCorrelativo, etc.
+
+# Cómo usar #
+
+Registrar el dll como referencia en el addon e instanciar la librería de la siguiente forma:
+
+...
+Dim CMP as CMP\_Functions.FuncionesB1
+...
+Public Sub New()
+> Try
+> > Pappl = pApps.GetApplication
+
+
+> 'Inicializo biblioteca de funciones
+> CMP = New CMP\_Functions.FuncionesB1(oCompany, Pappl)
+
+> If Not CMP.validarVersion() Then    ' valida si el add-on requiere crear tablas y campos
+
+> CreaTabla()             ' crea tablas de usuario
+> CreaCampos()            ' crea campos de usuario
+> CreaUDO()               ' crea los objetos de usuario
+> CreaBusquedaF()         ' crea búsquedas formateadas
+> CMP.confirmarVersion()      ' marca la versión del add-on como registrada
+
+> End If
+> CreaReportes()          ' crea querys y layouts
+> CreaMenu()                  ' crea items de menu
+
+> Catch ex As Exception
+
+> End Try
+> End Sub
+
+
+# Disclaimer #
+
+Esta librería se provee "AS IS" (tal cual está) bajo licencia GNU. No se estipula ningún tipo de soporte.
